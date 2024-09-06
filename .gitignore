@@ -1,0 +1,7 @@
+*.rdi
+*.sqlite
+*.pdb
+*.exe
+*.artifact
+*.bin
+*.dSYM
