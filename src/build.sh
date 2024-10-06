@@ -13,13 +13,11 @@ elif gcfc -v &> /dev/null; then
     CC=gcc 
 else
     echo "Missing 'gcc'/ 'clang'"
-    exit
+    exit 1
 fi
 
 if [ $OS == "Darwin" ]; then
-    if libtool -V &> /dev/null; then
-        echo "Missing 'libtool'"
-    fi
+    libtool -V &> /dev/null || { echo "Missing 'libtool'"; exit 2 }
 fi
 
 $CC -c -O3 -Qn "./sqlite3.c" -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_UTF16 -DSQLITE_OMIT_TEST_CONTROL

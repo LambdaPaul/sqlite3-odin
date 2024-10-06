@@ -1,4 +1,4 @@
-//+private
+#+private
 package sqlite3_odin_tests
 
 import "base:runtime"
