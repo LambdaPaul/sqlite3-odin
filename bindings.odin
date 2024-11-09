@@ -998,7 +998,7 @@ mutex :: struct {}
 backup :: struct {}
 index_info :: struct {}
 
-callback :: proc(db: rawptr, col: i32, vals: [^]cstring, cols: [^]cstring) -> Result
+callback :: proc "c" (db: rawptr, col: i32, vals: [^]cstring, cols: [^]cstring) -> Result
 
 value :: struct {
 	u:        struct #raw_union {}, // MemValue
