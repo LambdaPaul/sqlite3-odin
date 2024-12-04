@@ -12,10 +12,9 @@ when ODIN_OS == .Windows {
 	foreign import sqlite "system:sqlite3"
 }
 
-VERSION :: "3.47.0"
-VERSION_NUMBER :: 3047000
-SOURCE_ID :: "2024-10-21 16:30:22 03a9703e27c44437c39363d0baf82db4ebc94538a0f28411c85dda156f82636e"
-
+VERSION :: "3.47.1"
+VERSION_NUMBER :: 3047001
+SOURCE_ID :: "2024-11-25 12:07:48 b95d11e958643b969c47a8e5857f3793b9e69700b8f1469371386369a26e577e"
 
 @(default_calling_convention = "cdecl", link_prefix = "sqlite3_")
 foreign sqlite {
@@ -634,6 +633,7 @@ Io_Cap :: enum u16 {
 	POWERSAFE_OVERWRITE   = 0x00001000,
 	IMMUTABLE             = 0x00002000,
 	BATCH_ATOMIC          = 0x00004000,
+	SUBPAGE_READ          = 0x00008000,
 }
 
 File_Lock :: enum u8 {
