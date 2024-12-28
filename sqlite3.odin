@@ -12,9 +12,9 @@ when ODIN_OS == .Windows {
 	foreign import sqlite "system:sqlite3"
 }
 
-VERSION :: "3.47.1"
-VERSION_NUMBER :: 3047001
-SOURCE_ID :: "2024-11-25 12:07:48 b95d11e958643b969c47a8e5857f3793b9e69700b8f1469371386369a26e577e"
+VERSION :: "3.47.2"
+VERSION_NUMBER :: 3047002
+SOURCE_ID :: "2024-12-07 20:39:59 2aabe05e2e8cae4847a802ee2daddc1d7413d8fc560254d93ee3e72c14685b6c"
 
 @(default_calling_convention = "cdecl", link_prefix = "sqlite3_")
 foreign sqlite {
